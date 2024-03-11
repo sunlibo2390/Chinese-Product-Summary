@@ -1,7 +1,7 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
-title: Random Number Generator Challenge
-short_description: Random number generation challenge for each submission
+title: Chinese Product Reviews Summary
+short_description: Generate concise and comprehensive summaries of Chinese product reviews
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html
 terms_and_conditions: templates/terms_and_conditions.html
@@ -19,17 +19,37 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["Metric1", "Metric2", "Metric3", "Total"],
-        "default_order_by": "Total",
+        "labels": ["BLEU", "ROUGE", "METEOR", "Fact.", "Compre.", "Relev.", "# Param (b)"],
+        "default_order_by": "BLEU",
         "metadata": {
-          "Metric1": {
+          "BLEU": {
             "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "description": "Average BLEU scores between ground truths and generated summaries.",
           },
-          "Metric2": {
+          "ROUGE": {
             "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          }
+            "description": "Average ROUGE-L scores between ground truths and generated summaries.",
+          },
+          "METEOR": {
+            "sort_ascending": True,
+            "description": "Average METEOR scores between ground truths and generated summaries.",
+          },
+          "Fact.": {
+            "sort_ascending": True,
+            "description": "Average factuality scores between ground truths and generated summaries.",
+          },
+          "Compre.": {
+            "sort_ascending": True,
+            "description": "Average comprehensiveness scores between ground truths and generated summaries.",
+          },
+          "Relev.": {
+            "sort_ascending": True,
+            "description": "Average relevance scores between ground truths and generated summaries.",
+          },
+          "# Param (b).": {
+            "sort_ascending": False,
+            "description": "The amount of model parameters, in billions",
+          },
         }
       }
 

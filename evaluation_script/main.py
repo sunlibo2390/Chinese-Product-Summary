@@ -64,13 +64,29 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         print("Evaluating for Product-Csum-Cross Phase")
         output["result"] = [
             {
-                "product_csum_cross": {
-                    "BLEU": random.randint(0, 99),
-                    "ROUGE": random.randint(0, 99),
-                    "METEOR": random.randint(0, 99),
-                    "Fact.": random.randint(0, 99),
-                    "Compre.": random.randint(0, 99),
-                    "Relev.": random.randint(0, 99),
+                "Cosmetic": {
+                    "BLEU": 33.73,
+                    "ROUGE": 32.47,
+                    "METEOR": 27.87,
+                    "Fact.": 36.21,
+                    "Compre.": 54.93,
+                    "Relev.": 26.17,
+                },
+                "Automobile": {
+                    "BLEU": 34.00,
+                    "ROUGE": 34.19,
+                    "METEOR":  29.77,
+                    "Fact.": 46.23,
+                    "Compre.": 82.92,
+                    "Relev.":  26.76,
+                },
+                "Restaurant": {
+                    "BLEU": 28.88,
+                    "ROUGE": 29.16,
+                    "METEOR": 24.93,
+                    "Fact.": 35.98,
+                    "Compre.": 62.21,
+                    "Relev.": 23.40,
                 }
             }
         ]

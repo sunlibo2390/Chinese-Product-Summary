@@ -19,7 +19,7 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["BLEU", "ROUGE", "METEOR", "Compre.", "Relev."],
+        "labels": ["BLEU", "ROUGE", "METEOR", "Fact.", "Compre.", "Relev."],
         "default_order_by": "BLEU",
         "metadata": {
           "BLEU": {

@@ -59,7 +59,7 @@ challenge_phases:
     start_date: 2024-01-19 00:00:00
     end_date: 2099-04-25 23:59:59
     test_annotation_file: annotations/test_annotations_devsplit.json
-    codename: dev
+    codename: product_csum
     max_submissions_per_day: 5
     max_submissions_per_month: 50
     max_submissions: 50
@@ -105,7 +105,7 @@ challenge_phases:
     start_date: 2024-01-01 00:00:00
     end_date: 2099-05-24 23:59:59
     test_annotation_file: annotations/test_annotations_testsplit.json
-    codename: test
+    codename: product_csum_cross
     max_submissions_per_day: 5
     max_submissions_per_month: 50
     max_submissions: 50

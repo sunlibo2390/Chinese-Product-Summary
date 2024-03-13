@@ -34,6 +34,10 @@ leaderboard:
             "sort_ascending": True,
             "description": "Average METEOR scores between ground truths and generated summaries.",
           },
+          "Fact.": {
+            "sort_ascending": True,
+            "description": "Average factuality scores between ground truths and generated summaries.",
+          },
           "Compre.": {
             "sort_ascending": True,
             "description": "Average comprehensiveness scores between ground truths and generated summaries.",

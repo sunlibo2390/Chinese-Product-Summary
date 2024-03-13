@@ -48,11 +48,12 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         output["result"] = [
             {
                 "product_csum": {
-                    "BLEU": random.randint(0, 99),
-                    "ROUGE": random.randint(0, 99),
-                    "METEOR": random.randint(0, 99),
-                    "Compre.": random.randint(0, 99),
-                    "Relev.": random.randint(0, 99),
+                    "BLEU":  41.38,
+                    "ROUGE": 40.81,
+                    "METEOR": 38.98,
+                    "Fact.": 67.69 ,
+                    "Compre.": 89.00,
+                    "Relev.":  37.11,
                 }
             }
         ]
@@ -67,6 +68,7 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
                     "BLEU": random.randint(0, 99),
                     "ROUGE": random.randint(0, 99),
                     "METEOR": random.randint(0, 99),
+                    "Fact.": random.randint(0, 99),
                     "Compre.": random.randint(0, 99),
                     "Relev.": random.randint(0, 99),
                 }

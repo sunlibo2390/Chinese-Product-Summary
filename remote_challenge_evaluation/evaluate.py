@@ -48,29 +48,36 @@ def evaluate(user_submission_file, phase_codename, test_annotation_file=None, **
     test_annotation_file = json.loads(open("{phase_codename}_path", "r"))
     '''
     output = {}
-    if phase_codename == "dev":
-        print("Evaluating for Dev Phase")
+    if phase_codename == "product_csum":
+        print("Evaluating for Product-Csum Phase")
         output["result"] = [
             {
-                "split": "train_split",
+                "split": "product_csum",
                 "show_to_participant": True,
-                "accuracies": {"Metric1": 90},
+                "accuracies": {
+                    "BLEU": random.randint(0, 99),
+                    "ROUGE": random.randint(0, 99),
+                    "METEOR": random.randint(0, 99),
+                    "Compre.": random.randint(0, 99),
+                    "Relev.": random.randint(0, 99),
+                },
             },
         ]
-        print("Completed evaluation for Dev Phase")
-    elif phase_codename == "test":
-        print("Evaluating for Test Phase")
+        print("Completed evaluation for Product-Csum Phase")
+    elif phase_codename == "product_csum_cross":
+        print("Evaluating for Product-Csum-Cross Phase")
         output["result"] = [
             {
-                "split": "train_split",
+                "split": "product_csum_cross",
                 "show_to_participant": True,
-                "accuracies": {"Metric1": 90},
-            },
-            {
-                "split": "test_split",
-                "show_to_participant": False,
-                "accuracies": {"Metric1": 50, "Metric2": 40},
+                "accuracies": {
+                    "BLEU": random.randint(0, 99),
+                    "ROUGE": random.randint(0, 99),
+                    "METEOR": random.randint(0, 99),
+                    "Compre.": random.randint(0, 99),
+                    "Relev.": random.randint(0, 99),
+                },
             },
         ]
-        print("Completed evaluation for Test Phase")
+        print("Completed evaluation for Product-Csum-Cross Phase")
     return output

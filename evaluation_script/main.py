@@ -42,6 +42,7 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
     """
     print(kwargs["submission_metadata"])
     output = {}
+    print(phase_codename)
     if phase_codename == "product_csum":
         print("Evaluating for Product-Csum Phase")
         output["result"] = [

@@ -58,7 +58,7 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
             }
         ]
         # To display the results in the result file
-        output["submission_result"] = output["result"][0]["train_split"]
+        output["submission_result"] = output["result"][0]["product_csum"]
         print("Completed evaluation for Product-Csum Phase")
     elif phase_codename == "product_csum_cross":
         print("Evaluating for Product-Csum-Cross Phase")

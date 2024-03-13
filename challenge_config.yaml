@@ -19,7 +19,7 @@ leaderboard:
   - id: 1
     schema:
       {
-        "labels": ["BLEU", "ROUGE", "METEOR", "Fact.", "Compre.", "Relev.", "# Param (b)"],
+        "labels": ["BLEU", "ROUGE", "METEOR", "Compre.", "Relev."],
         "default_order_by": "BLEU",
         "metadata": {
           "BLEU": {
@@ -34,10 +34,6 @@ leaderboard:
             "sort_ascending": True,
             "description": "Average METEOR scores between ground truths and generated summaries.",
           },
-          "Fact.": {
-            "sort_ascending": True,
-            "description": "Average factuality scores between ground truths and generated summaries.",
-          },
           "Compre.": {
             "sort_ascending": True,
             "description": "Average comprehensiveness scores between ground truths and generated summaries.",
@@ -45,10 +41,6 @@ leaderboard:
           "Relev.": {
             "sort_ascending": True,
             "description": "Average relevance scores between ground truths and generated summaries.",
-          },
-          "# Param (b).": {
-            "sort_ascending": False,
-            "description": "The amount of model parameters, in billions",
           },
         }
       }
